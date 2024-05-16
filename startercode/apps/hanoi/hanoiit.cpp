@@ -19,6 +19,9 @@ int main() {
       cout << "Moved " << numdisks << " pegs." <<  endl;
     }
   auto end = std::chrono::system_clock::now();
+  auto timespent = end - start;
+
+    cout << timespent.count() / 1000;
     return 0;
 }
 
