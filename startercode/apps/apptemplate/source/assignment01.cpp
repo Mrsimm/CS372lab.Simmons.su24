@@ -1,8 +1,8 @@
 //
 // File:   assignment1.cpp
 // Author: Troy Simmons
-// Purpose: 
-// Illustrate some of the bad thins that can happen with
+// Purpose: Show the anti-practices with pointers
+// Illustrate some of the bad things that can happen with
 // pointers
 //
 #include <iostream>
@@ -16,7 +16,7 @@ void BadPointer1()
 	int searcher = 0;
 	int* ptr = new int[size];
 	cout << "These are the numbers for the first pointer on Part 1" << endl;
-	while (searcher <= size)
+	while (searcher <= size) //Initialize all variables in the array and output them
 	{
 		ptr[searcher] = searcher + 2;
 		cout << ptr[searcher] << ", ";
@@ -27,7 +27,7 @@ void BadPointer1()
 	delete[] ptr;
 	int searcher2 = 0;
 	cout << "These are the results of the second pointer after the first one is deleted" << endl;
-	while (searcher2 <= size)
+	while (searcher2 <= size) //search the second pointer, which is set to be equal to the original pointer, after the original pointer has been deleted
 	{
 		cout << ptr2[searcher2] << ", ";
 		searcher2++;
