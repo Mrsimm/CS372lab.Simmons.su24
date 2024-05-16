@@ -10,6 +10,7 @@ int main() {
     const int TOPEG = 3;
     const int TEMPPEG = 2;
     const int NUMDISKS = 3;
+    auto start = std::chrono::system_clock::now();
     for (auto numdisks: {3,5,6}) {
       cout << "Numdisks: " << numdisks << endl;
       moveDisks(numdisks, FROMPEG, TOPEG, TEMPPEG);
@@ -17,6 +18,10 @@ int main() {
            << " from peg " << FROMPEG
            << " to peg " << TOPEG << endl;
     }
+    auto end = std::chrono::system_clock::now();
+    auto timespent = end - start;
+
+    cout << timespent.count() / 1000;
 }
 
 void moveDisks(int num, int fromPeg, int toPeg, int tempPeg) {
@@ -33,3 +38,4 @@ void printIt(int disk, int fromPeg, int toPeg) {
       << " from pef " << fromPeg
       << " to peg " << toPeg << endl;
 }
+
