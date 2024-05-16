@@ -41,7 +41,7 @@ void BadPointer2()
 	int* ptr = new int[size];
 	int* ptr2 = ptr;
 	cout << "These are the numbers for the first pointer on Part 2" << endl;
-	while (searcher <= size)
+	while (searcher <= size) //Initialize all variables in the array and output them
 	{
 		ptr[searcher] = searcher + 5;
 		cout << ptr[searcher] << endl;
@@ -52,10 +52,10 @@ void BadPointer2()
 	delete[] ptr;
 	int searcher2 = 0;
 	cout << "These are the results of the second pointer after the first one is deleted" << endl;
-	cout << *ptr2;
+	cout << *ptr2; //Print the address of the second pointer after the first one has been deleted
 	while (searcher2 <= size)
 	{
-		cout << ptr[searcher2];
+		cout << ptr[searcher2]; //output all elements of the first array after it has been deleted
 		searcher2++;
 	}
 }
