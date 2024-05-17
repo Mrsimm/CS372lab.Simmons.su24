@@ -6,6 +6,7 @@
 // pointers
 //
 #include <iostream>
+#include <string>
 using namespace std;
 void BadPointer1();
 void BadPointer2();
