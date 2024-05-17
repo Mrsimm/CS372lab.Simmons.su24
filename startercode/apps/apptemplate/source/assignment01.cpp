@@ -51,7 +51,7 @@ void BadPointer2()
 		cout << ptr[searcher] << endl;
 		searcher = searcher + 1;
 	}
-	
+
 
 	delete[] ptr;
 	int searcher2 = 0;
@@ -62,6 +62,7 @@ void BadPointer2()
 		cout << ptr[searcher2]; //output all elements of the first array after it has been deleted
 		searcher2++;
 	}
+}
 
 
 	string BadPointer3()
@@ -77,7 +78,7 @@ void BadPointer2()
 
 
 
-}
+
 int main()
 {
 	BadPointer1();
