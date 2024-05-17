@@ -9,6 +9,9 @@
 using namespace std;
 void BadPointer1();
 void BadPointer2();
+string BadPointer3();
+void BadPointer4();
+
 
 void BadPointer1()
 {
@@ -58,10 +61,26 @@ void BadPointer2()
 		cout << ptr[searcher2]; //output all elements of the first array after it has been deleted
 		searcher2++;
 	}
+
+
+	string BadPointer3()
+	{
+		string* ptr = new std::string("Doughnut");
+		return ptr*
+	}
+	void BadPointer4()
+	{
+		string str = BadPointer3();
+		cout << "This is the string from the third function:" << str;
+	}
+
+
+
 }
 int main()
 {
 	BadPointer1();
 	BadPointer2();
+	BadPointer4();
 	return 0;
 }
