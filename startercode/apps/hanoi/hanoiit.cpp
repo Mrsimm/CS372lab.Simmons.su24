@@ -10,7 +10,7 @@ void MoveDisksHelper(stack<int> &, stack<int> &, char , char ) ;
 
 int main() {
   auto start = std::chrono::system_clock::now();
-  for (auto numdisks: {3,5,6}) {
+  for (auto numdisks: {5, 10, 15, 20, 25, 30, 35}) {
       stack<int> source;
       stack<int> dest;
       stack<int> aux;
