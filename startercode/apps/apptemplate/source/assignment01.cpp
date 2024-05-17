@@ -10,7 +10,7 @@
 using namespace std;
 void BadPointer1();
 void BadPointer2();
-string BadPointer3();
+string* BadPointer3();
 void BadPointer4();
 
 
@@ -48,31 +48,34 @@ void BadPointer2()
 	while (searcher <= size) //Initialize all variables in the array and output them
 	{
 		ptr[searcher] = searcher + 5;
-		cout << ptr[searcher] << endl;
+		cout << ptr[searcher] << ",";
 		searcher = searcher + 1;
 	}
+	cout << endl;
 
 
 	delete[] ptr;
 	int searcher2 = 0;
 	cout << "These are the results of the second pointer after the first one is deleted" << endl;
-	cout << *ptr2; //Print the address of the second pointer after the first one has been deleted
+	cout << *ptr2 << endl; //Print the address of the second pointer after the first one has been deleted
 	while (searcher2 <= size)
 	{
 		cout << ptr[searcher2]; //output all elements of the first array after it has been deleted
 		searcher2++;
 	}
+	cout << endl;
 }
 
 
-	string BadPointer3()
+	string* BadPointer3()
 	{
-		string* ptr = new std::string("Doughnut");
-		return ptr*
+		string* ptr;
+		ptr = new string ("Doughnut");
+		return ptr;
 	}
 	void BadPointer4()
 	{
-		string str = BadPointer3();
+		string* str = BadPointer3();
 		cout << "This is the string from the third function:" << str;
 	}
 
