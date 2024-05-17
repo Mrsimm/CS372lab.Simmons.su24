@@ -21,7 +21,7 @@ int main() {
     auto end = std::chrono::system_clock::now();
     auto timespent = end - start;
 
-    cout << timespent.count() / 1000;
+    cout << timespent.count() / 1000 << "Seconds";
 }
 
 void moveDisks(int num, int fromPeg, int toPeg, int tempPeg) {
