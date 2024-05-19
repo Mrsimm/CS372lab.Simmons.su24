@@ -10,14 +10,15 @@ int main() {
     const int TOPEG = 3;
     const int TEMPPEG = 2;
     const int NUMDISKS = 3;
+    int numdisks;
+    cout << "How many disks: " << endl;
+    cin >> numdisks;
     auto start = std::chrono::system_clock::now();
-    for (auto numdisks: {5, 10, 15, 20, 25, 30, 35}) {
       cout << "Numdisks: " << numdisks << endl;
       moveDisks(numdisks, FROMPEG, TOPEG, TEMPPEG);
       cout << "Moved " << numdisks << " pegs"
            << " from peg " << FROMPEG
            << " to peg " << TOPEG << endl;
-    }
     auto end = std::chrono::system_clock::now();
     auto timespent = end - start;
 
