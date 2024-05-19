@@ -10,14 +10,15 @@ void MoveDisksHelper(stack<int> &, stack<int> &, char , char ) ;
 
 int main() {
   auto start = std::chrono::system_clock::now();
-  for (auto numdisks: {5, 10, 15, 20, 25, 30, 35}) {
+int numdisks;
+    cout << "How many disks: " << endl;
+    cin >> numdisks;
       stack<int> source;
       stack<int> dest;
       stack<int> aux;
       cout << "Numdisks: " << numdisks << endl;
       moveDisks(numdisks, source, aux, dest);
       cout << "Moved " << numdisks << " pegs." <<  endl;
-    }
   auto end = std::chrono::system_clock::now();
   auto timespent = end - start;
 
@@ -91,5 +92,3 @@ void printIt(int disk, char fromPeg, char toPeg) {
            << "from peg " << fromPeg
            << "to peg " << toPeg << std::endl;
 }
-
-
