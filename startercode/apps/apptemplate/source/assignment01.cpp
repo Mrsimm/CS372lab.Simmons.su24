@@ -76,7 +76,7 @@ void BadPointer2()
 	void BadPointer4()
 	{
 		string* str = BadPointer3();
-		cout << "This is the string from the third function:" << str;
+		cout << "This is the string from the third function:" << *str;
 	}
 
 
