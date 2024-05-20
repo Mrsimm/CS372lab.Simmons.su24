@@ -19,10 +19,11 @@ int main() {
       cout << "Moved " << numdisks << " pegs"
            << " from peg " << FROMPEG
            << " to peg " << TOPEG << endl;
-    auto end = std::chrono::system_clock::now();
-    auto timespent = end - start;
-
-    cout << timespent.count() / 1000 << "Seconds";
+   auto end = std::chrono::system_clock::now();
+  std::chrono::duration<double> duration = end - start;
+int seconds = std::chrono::duration_cast<std::chrono::seconds>(duration).count();
+    cout << seconds << " Seconds";
+    return 0;
 }
 
 void moveDisks(int num, int fromPeg, int toPeg, int tempPeg) {
