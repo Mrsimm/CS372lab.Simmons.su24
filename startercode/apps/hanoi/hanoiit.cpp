@@ -20,9 +20,9 @@ int numdisks;
       moveDisks(numdisks, source, aux, dest);
       cout << "Moved " << numdisks << " pegs." <<  endl;
   auto end = std::chrono::system_clock::now();
-  auto timespent = end - start;
-
-    cout << timespent.count() / 1000 << "Seconds";
+  std::chrono::duration<double> duration = end - start;
+int seconds = std::chrono::duration_cast<std::chrono::seconds>(duration).count();
+    cout << seconds << " Seconds";
     return 0;
 }
 
