@@ -1,0 +1,1 @@
+I have decided to combine parts 2 3 and 4 into 1 .h and cpp file so I don't need to make 3 separate tree classes with different elements.
