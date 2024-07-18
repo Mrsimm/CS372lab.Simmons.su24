@@ -24,8 +24,6 @@ protected:
   
 };
 
-// Test cases
-
 TEST_F(TableTest, InsertAndFind)
 {
     Table<TestData> table;
@@ -40,7 +38,6 @@ TEST_F(TableTest, InsertAndFind)
     EXPECT_TRUE(found);
     EXPECT_EQ(result.key, entry1.key);
 
-    // Test inserting a different entry
     table.insert(entry2);
     table.find(entry2.key, found, result);
     EXPECT_TRUE(found);
