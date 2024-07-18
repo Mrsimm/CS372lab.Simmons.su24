@@ -16,11 +16,6 @@ void SetUp() override
     table = new Table<TestData>;
 }
 
-void TearDown() override 
-{
-    delete table;
-}
-
   
 };
 
@@ -42,6 +37,7 @@ TEST_F(TableTest, InsertAndFind)
     table.find(entry2.key, found, result);
     EXPECT_TRUE(found);
     EXPECT_EQ(result.key, entry2.key);
+    delete table;
 }
 
 TEST_F(TableTest, Remove) 
@@ -57,6 +53,7 @@ TEST_F(TableTest, Remove)
     TestData result;
     table.find(entry.key, found, result);
     EXPECT_FALSE(found);
+    delete table;
 }
 
 TEST_F(TableTest, IsPresent) 
@@ -71,5 +68,6 @@ TEST_F(TableTest, IsPresent)
     table.remove(entry.key);
 
     EXPECT_FALSE(table.isPresent(entry.key));
+    delete table;
 }
 
