@@ -11,15 +11,15 @@ struct TestData
 class TableTest : public ::testing::Test 
 {
 protected:
-    void SetUp() override
-    {
-       
-    }
+void SetUp() override
+{
+    table = new Table<TestData>;
+}
 
-    void TearDown() override 
-    {
-    
-    }
+void TearDown() override 
+{
+    delete table;
+}
 
   
 };
